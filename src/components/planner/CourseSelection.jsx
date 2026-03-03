@@ -22,7 +22,7 @@ export default function CourseSelection({
     });
 
   return (
-    <aside className="w-full lg:w-80 flex flex-col bg-card rounded-2xl border border-border overflow-hidden shadow-sm lg:h-full">
+    <aside className=" w-full lg:w-80 flex flex-col bg-card rounded-2xl border border-border overflow-hidden shadow-sm lg:h-full">
       <div className="p-2 border-b border-border bg-foreground/[0.02]">
         <div className="flex justify-between items-center my-1 ">
           

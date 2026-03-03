@@ -35,7 +35,7 @@ export default function ShowAllCourses() {
     });
 
   return (
-    <div className="flex flex-col min-h-[calc(100vh-160px)] lg:h-[calc(100vh-140px)] max-w-5xl mx-auto bg-card rounded-2xl md:rounded-[32px] border border-border overflow-hidden shadow-2xl">
+    <div className="flex flex-col min-h-[calc(100vh-160px)] lg:h-[calc(100vh-140px)] max-w-5xl mx-auto bg-card rounded-2xl   border border-border overflow-hidden shadow-2xl">
       <CoursesHeader 
         courseCount={courses.length}
         searchTerm={searchTerm}
@@ -44,7 +44,7 @@ export default function ShowAllCourses() {
       />
 
       {/* SCROLLABLE CONTENT */}
-      <div className="flex-1 overflow-y-auto p-6 space-y-4">
+      <div className="flex-1 overflow-y-auto p-5 space-y-4">
         {filteredCourses.length === 0 ? (
           <div className="h-full flex flex-col items-center justify-center text-center py-16 bg-foreground/[0.01] rounded-[24px] border-2 border-dashed border-border/50">
             <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4">

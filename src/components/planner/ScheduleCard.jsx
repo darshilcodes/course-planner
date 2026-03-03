@@ -39,7 +39,7 @@ return (
   <div className="bg-card rounded-2xl border border-border shadow-xl overflow-hidden mb-12">
 
     {/* Header */}
-    <div className="px-4 py-3 border-b border-border bg-primary/5 flex items-center justify-between">
+    <div className="px-4 py-2 border-b border-border bg-primary/5 flex items-center justify-between">
       <div className="flex items-center gap-4">
         <div className="w-8 h-8 rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-md">
           {index + 1}
@@ -50,7 +50,7 @@ return (
       </div>
 <button
   onClick={() => onExport(index)}
-  className="px-5 cursor-pointer py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:opacity-90 transition-all duration-300 shadow-md flex items-center gap-2"
+  className="px-5 cursor-pointer py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:opacity-90 transition-all duration-300 shadow-md flex items-center gap-2"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -93,13 +93,13 @@ return (
           <div className="relative">
             <div className="flex flex-col">
 
-              {visibleBlocks.map((block) => (
+              {timeBlocks.map((block) => (
                 <div
                   key={block.start}
                   className="grid grid-cols-[100px_repeat(5,1fr)] border-t border-border"
                 >
                   {/* Time Column */}
-                  <div className="py-4 px-1  text-right">
+                  <div className="py-2 px-1  text-right">
                     <div className="text-sm font-semibold text-foreground tabular-nums">
                       {block.start}-{block.end}
                     </div>
@@ -124,7 +124,7 @@ return (
                         className="relative border-l border-border flex items-center justify-center hover:bg-muted/40 transition-colors"
                       >
                         {slot ? (
-                          <div className="w-[90%] h-[85%] p-1 rounded-2xl flex flex-col items-center justify-center text-center bg-primary/10 border border-primary/30 shadow-sm hover:scale-[1.02] transition-transform">
+                          <div className="w-[90%] h-[75%] py-auto rounded-2xl flex flex-col items-center justify-center text-center bg-primary/10 border border-primary/30 shadow-sm hover:scale-[1.02] transition-transform">
 
                             <div className="font-bold text-xs text-primary mb-1">
                               {slot.courseCode} 

@@ -26,14 +26,14 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
       {/* Header */}
       <div
         onClick={onToggle}
-        className={`cursor-pointer p-4 md:p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-colors`}
+        className={`cursor-pointer p-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2 transition-colors`}
       >
         <div className="flex gap-3 md:gap-8 items-center">
           <div
-            className={`w-10 h-10 md:w-25 md:h-12 rounded-xl flex items-center justify-center font-black text-base md:text-lg border transition-all duration-500 ${
+            className={`w-10 h-10 md:w-25 md:h-10 rounded-xl flex items-center justify-center font-black text-base md:text-lg border transition-all duration-500 ${
               isSelected || isOpen
                 ? "bg-primary text-white border-primary shadow-lg shadow-primary/30"
-                : "bg-primary/5 text-primary border-primary/10 group-hover:bg-primary/10"
+                : "bg-background text-primary border-primary/10 group-hover:bg-background"
             }`}
           >
             {course.courseCode}
@@ -70,7 +70,7 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
         <div className="flex items-center gap-4 self-end sm:self-center">
           <button
             onClick={handleSelect}
-            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
+            className={`px-4 py-1 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
               isSelected
                 ? "bg-primary text-white shadow-lg shadow-primary/25 border border-primary"
                 : "bg-background text-foreground/60 border border-border hover:border-primary/50 hover:text-primary"

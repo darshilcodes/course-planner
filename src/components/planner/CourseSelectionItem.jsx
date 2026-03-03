@@ -28,7 +28,7 @@ export default function CourseSelectionItem({ course, onToggleCourse, onToggleSe
             {course.courseCode}
           </span>
 
-          <span className="text-xs text-foreground/50 truncate w-48 group-hover:text-primary transition-colors">
+          <span className="text-xs text-foreground truncate w-48   transition-colors">
             {course.courseName}
           </span>
         </div>

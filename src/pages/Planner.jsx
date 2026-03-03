@@ -52,7 +52,7 @@ export default function Planner() {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 h-screen lg:h-[calc(100vh-180px)] overflow-hidden">
+    <div className="flex flex-col lg:flex-row gap-8 h-screen lg:h-[calc(100vh-160px)] overflow-hidden my-0">
       <CourseSelection
         courses={courses}
         searchTerm={searchTerm}
@@ -63,12 +63,12 @@ export default function Planner() {
       />
 
       <section className="flex-1 flex flex-col min-w-0 h-full">
-        <div className="flex justify-between items-end mb-4">
+        <div className="flex justify-between items-end mb-3">
           <div>
-            <h2 className="text-2xl font-extrabold text-foreground tracking-tight">
+            <h2 className="text-xl font-extrabold text-foreground tracking-tight">
               Generated Schedules
             </h2>
-            <p className="text-foreground/50 mt-1">
+            <p className="text-foreground/50 mt-0">
               Found <span className="text-primary font-bold">{schedules.length}</span> possible combinations
             </p>
           </div>

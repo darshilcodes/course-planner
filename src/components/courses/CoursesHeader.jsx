@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CoursesHeader({ courseCount, searchTerm, onSearchChange, onClear }) {
   return (
-    <div className="p-6   rounded-1xl border-border bg-foreground/[0.02] relative overflow-hidden">
+    <div className="p-6 rounded-1xl border-border bg-foreground/[0.02] relative overflow-hidden">
       {/* Abstract background element */}
       <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/5 rounded-1xl blur-3xl" />
 
@@ -16,7 +16,7 @@ export default function CoursesHeader({ courseCount, searchTerm, onSearchChange,
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+        <div className="flex flex-col sm:flex-row items-center gap-1 w-full md:w-auto">
           <div className="relative w-full md:w-72 group order-1 sm:order-2">
             <input
               type="text"
