@@ -35,7 +35,7 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
             className={`w-10 h-10 md:w-24 md:h-10 rounded-xl flex items-center justify-center font-bold text-base md:text-lg border transition-all duration-500 ${
               isSelected || isOpen
                 ? "bg-primary text-primary-foreground border-primary shadow-md"
-                : "bg-foreground/10 text-primary border-border"
+                : "bg-primary/5 text-primary border-border"
             }`}
           >
             {course.courseCode}
