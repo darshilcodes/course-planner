@@ -127,8 +127,9 @@ return (
                           <div className="w-[90%] h-[75%] py-auto rounded-2xl flex flex-col items-center justify-center text-center bg-primary/10 border border-primary/30 shadow-sm hover:scale-[1.02] transition-transform">
 
                             <div className="font-bold text-xs text-primary mb-1">
-                              {slot.courseCode} 
-                            </div>
+                              {slot.courseCode}-{slot.sectionId}
+                              
+                              </div>
 
                              
 
