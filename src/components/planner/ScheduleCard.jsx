@@ -6,38 +6,42 @@ const ScheduleCard = React.forwardRef(({ schedule, index, onExport }, ref) => {
   return (
     <div className="bg-card rounded-3xl border border-border shadow-sm overflow-hidden group hover:shadow-xl hover:shadow-primary/5 transition-all duration-500">
       {/* Actions Bar (Excluded from Export) */}
-      <div className="px-6 py-3 border-b border-border bg-foreground/[0.02] flex justify-end">
-        <button
-          onClick={() => onExport(index)}
-          className="px-4 py-1.5 rounded-full bg-primary text-white text-xs font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform flex items-center gap-2 cursor-pointer"
-        >
-          <svg
-            className="w-3.5 h-3.5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-            />
-          </svg>
-          Export Schedule
-        </button>
-      </div>
+       <div className="px-6 py-4 border-b border-border bg-foreground/[0.02] flex items-center justify-between">
+
+  {/* LEFT SIDE - Title */}
+  <h3 className="text-lg font-bold text-foreground flex items-center gap-3">
+    <span className="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-sm">
+      {index + 1}
+    </span>
+    Schedule Configuration
+  </h3>
+
+  {/* RIGHT SIDE - Export Button */}
+  <button
+    onClick={() => onExport(index)}
+    className="px-4 py-1.5 rounded-full bg-primary text-white text-xs font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform flex items-center gap-2 cursor-pointer"
+  >
+    <svg
+      className="w-3.5 h-3.5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+      />
+    </svg>
+    Export Schedule
+  </button>
+
+</div>
 
       {/* Captured Area */}
       <div ref={ref} className="bg-card">
-        <div className="p-6 border-b border-border bg-foreground/[0.01]">
-          <h3 className="text-lg font-bold text-foreground flex items-center gap-3">
-            <span className="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-sm">
-              {index + 1}
-            </span>
-            Schedule Configuration
-          </h3>
-        </div>
+        
 
         <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {days.map((day) => (
