@@ -22,37 +22,11 @@ export default function CourseSelection({
     });
 
   return (
-    <aside className="w-full lg:w-96 flex flex-col bg-card rounded-3xl border border-border overflow-hidden shadow-sm lg:h-full">
-      <div className="p-6 border-b border-border bg-foreground/[0.02]">
-        <div className="flex justify-between items-center mb-4">
-          <div>
-            <h2 className="text-lg font-bold text-foreground">Course Selection</h2>
-            <p className="text-[10px] text-foreground/50 font-medium uppercase tracking-wider mt-1">
-              Select your subjects
-            </p>
-          </div>
-          <button
-            onClick={onClearSelection}
-            className="p-2 rounded-xl text-accent hover:bg-accent/10 transition-colors group"
-            title="Clear all"
-          >
-            <svg
-              className="w-5 h-5 group-hover:rotate-90 transition-transform"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div className="relative">
+    <aside className="w-full lg:w-80 flex flex-col bg-card rounded-2xl border border-border overflow-hidden shadow-sm lg:h-full">
+      <div className="p-2 border-b border-border bg-foreground/[0.02]">
+        <div className="flex justify-between items-center my-1 ">
+          
+        <div className="relative w-[85%]">
           <input
             type="text"
             placeholder="Search by code or name..."
@@ -73,6 +47,27 @@ export default function CourseSelection({
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
+        </div>
+
+          <button
+            onClick={onClearSelection}
+            className="p-1 rounded-xl text-accent hover:bg-accent/10 transition-colors group"
+            title="Clear all"
+          >
+            <svg
+              className="w-5 h-5 group-hover:rotate-90 transition-transform"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
       </div>
 

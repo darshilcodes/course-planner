@@ -9,7 +9,6 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Planner />} />
         <Route path="courses" element={<ShowAllCourses />} />
-        {/* Redirect any old dashboard links to planner */}
         <Route path="dashboard" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

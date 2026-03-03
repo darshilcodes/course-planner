@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { NavLink, Outlet } from "react-router-dom"
 import ThemeToggle from "../components/ThemeToggle"
+import { useCourseContext } from "../context/CourseContext"
 
 export default function MainLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { totalCredits, totalCourses} = useCourseContext()
 
   const navLinks = [
     { to: "/", label: "Planner" },
@@ -48,6 +50,14 @@ export default function MainLayout() {
           </div>
 
           <div className="flex items-center gap-2 md:gap-4">
+            <div className="hidden sm:flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary animate-in fade-in zoom-in duration-300">
+              <span className="text-xs font-bold uppercase tracking-wider mr-2 opacity-70">Total Courses:</span>
+              <span className="text-sm font-black">{totalCourses}</span>
+            </div>
+            <div className="hidden sm:flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary animate-in fade-in zoom-in duration-300">
+              <span className="text-xs font-bold uppercase tracking-wider mr-2 opacity-70">Total Credits:</span>
+              <span className="text-sm font-black">{totalCredits}</span>
+            </div>
             <ThemeToggle />
             
             {/* Mobile Menu Button */}

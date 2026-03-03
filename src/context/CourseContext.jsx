@@ -83,8 +83,16 @@ export const CourseProvider = ({ children }) => {
     );
   };
 
+  const totalCredits = courses
+    .filter((course) => course.selected)
+    .reduce((sum, course) => sum + (course.credits || 0), 0);
+
+  const totalCourses= courses
+    .filter((course) => course.selected)
+    .reduce((sum, course) => sum + 1, 0);
+
   return (
-    <CourseContext.Provider value={{ courses, loading, toggleCourse, toggleSection, clearSelection }}>
+    <CourseContext.Provider value={{ courses, loading, toggleCourse, toggleSection, clearSelection, totalCredits, totalCourses}}>
       {children}
     </CourseContext.Provider>
   );

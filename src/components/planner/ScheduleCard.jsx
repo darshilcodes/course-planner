@@ -59,24 +59,62 @@ const ScheduleCard = React.forwardRef(({ schedule, index, onExport }, ref) => {
                     )
                     .sort((a, b) => a.startTime.localeCompare(b.startTime));
 
-                  return daySlots.length > 0 ? (
-                    daySlots.map((slot, i) => (
-                      <div
-                        key={i}
-                        className="group/slot relative p-3 rounded-xl bg-card border border-primary/20 shadow-sm hover:shadow-md transition-all animate-in fade-in slide-in-from-bottom-2 duration-300"
-                      >
-                        <div className="absolute top-0 left-0 w-1 h-full bg-primary rounded-l-xl opacity-70" />
-                        <div className="font-bold text-[10px] text-primary mb-1">
-                          {slot.courseCode}
+                  const beforeLunch = daySlots.filter(
+                    (slot) => slot.endTime <= "12:30"
+                  );
+                  const afterLunch = daySlots.filter(
+                    (slot) => slot.startTime >= "13:00"
+                  );
+
+                  const renderSlot = (slot, i) => (
+                    <div
+                      key={`${slot.courseCode}-${i}`}
+                      className="group/slot relative p-3 rounded-xl bg-card border border-primary/20 shadow-sm hover:shadow-md transition-all animate-in fade-in slide-in-from-bottom-2 duration-300"
+                    >
+                      <div className="absolute top-0 left-0 w-1 h-full bg-primary rounded-l-xl opacity-70" />
+                      <div className="font-bold text-[10px] text-primary mb-1 flex justify-between items-center">
+                        <span>{slot.courseCode}</span>
+                        <span className="text-[8px]  font-black uppercase">
+                          {slot.startTime < "12:30" ? "Morning" : "Afternoon"}
+                        </span>
+                      </div>
+                      <div className="text-[10px] font-medium text-foreground/60 leading-tight">
+                        {slot.startTime} - {slot.endTime}
+                      </div>
+                    </div>
+                  );
+
+                  return (
+                    <div className="flex flex-col gap-2 h-full">
+                      {/* Before Lunch */}
+                      <div className="flex flex-col gap-2">
+                        {beforeLunch.length > 0 ? (
+                          beforeLunch.map(renderSlot)
+                        ) : (
+                          <div className="h-4 border-b border-dashed border-border/30 mb-2" />
+                        )}
+                      </div>
+
+                      {/* Lunch Break Separator */}
+                      <div className="relative py-4 flex items-center justify-center">
+                        <div className="absolute inset-0 flex items-center">
+                          <div className="w-full border-t border-dashed border-primary/20"></div>
                         </div>
-                        <div className="text-[10px] font-medium text-foreground/60 leading-tight">
-                          {slot.startTime} - {slot.endTime}
+                        <div className="relative bg-card px-2 text-[8px] font-black text-primary uppercase tracking-widest bg-white border border-primary/10 rounded-full">
+                          Lunch 12:30-13:00
                         </div>
                       </div>
-                    ))
-                  ) : (
-                    <div className="flex-1 flex items-center justify-center">
-                      <div className="w-1.5 h-1.5 rounded-full bg-foreground/10" />
+
+                      {/* After Lunch */}
+                      <div className="flex flex-col gap-2 flex-1">
+                        {afterLunch.length > 0 ? (
+                          afterLunch.map(renderSlot)
+                        ) : (
+                          <div className="flex-1 flex items-center justify-center opacity-20">
+                            <div className="w-1 h-1 rounded-full bg-foreground" />
+                          </div>
+                        )}
+                      </div>
                     </div>
                   );
                 })()}

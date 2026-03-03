@@ -63,9 +63,9 @@ export default function Planner() {
       />
 
       <section className="flex-1 flex flex-col min-w-0 h-full">
-        <div className="flex justify-between items-end mb-8">
+        <div className="flex justify-between items-end mb-4">
           <div>
-            <h2 className="text-3xl font-extrabold text-foreground tracking-tight">
+            <h2 className="text-2xl font-extrabold text-foreground tracking-tight">
               Generated Schedules
             </h2>
             <p className="text-foreground/50 mt-1">

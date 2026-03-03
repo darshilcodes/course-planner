@@ -2,13 +2,13 @@ import React from "react";
 
 export default function CoursesHeader({ courseCount, searchTerm, onSearchChange, onClear }) {
   return (
-    <div className="p-4 md:p-6 border-b border-border bg-foreground/[0.02] relative overflow-hidden">
+    <div className="p-6   rounded-1xl border-border bg-foreground/[0.02] relative overflow-hidden">
       {/* Abstract background element */}
-      <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/5 rounded-1xl blur-3xl" />
 
       <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6">
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-xl md:text-2xl font-black tracking-tight text-foreground mb-1">
+          <h1 className="text-xs md:text-xl font-black tracking-tight text-foreground mb-1">
             All Courses
           </h1>
           <p className="text-foreground/50 text-xs md:text-sm max-w-xl font-medium leading-relaxed mx-auto md:mx-0">
@@ -17,17 +17,6 @@ export default function CoursesHeader({ courseCount, searchTerm, onSearchChange,
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
-          <button
-            onClick={onClear}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-border bg-background hover:bg-foreground/[0.02] text-foreground/70 hover:text-primary transition-all text-sm font-bold order-2 sm:order-1 w-full sm:w-auto justify-center"
-            title="Deselect all courses"
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-            Reset Selection
-          </button>
-
           <div className="relative w-full md:w-72 group order-1 sm:order-2">
             <input
               type="text"
@@ -52,7 +41,18 @@ export default function CoursesHeader({ courseCount, searchTerm, onSearchChange,
               </svg>
             </div>
           </div>
+          
         </div>
+          <button
+            onClick={onClear}
+            className="cursor-pointer flex items-center gap-2 px-3 py-2.5 rounded-xl border border-border bg-background hover:bg-foreground/[0.02] text-foreground/70 hover:text-primary transition-all text-sm font-bold order-2 sm:order-1 w-full sm:w-auto justify-center"
+            title="Deselect all courses"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+             
+          </button>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import ScheduleCard from "./ScheduleCard";
 export default function ScheduleList({ schedules, scheduleRefs, onExport }) {
   if (schedules.length === 0) {
     return (
-      <div className="h-full flex flex-col items-center justify-center text-center p-10 bg-card/50 rounded-3xl border-2 border-dashed border-border">
+      <div className="h-full flex flex-col items-center justify-center text-center p-10 bg-card/50 rounded-2xl border-2 border-dashed border-border">
         <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
           <svg
             className="w-10 h-10"

@@ -15,7 +15,7 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
 
   return (
     <div
-      className={`group bg-card rounded-[24px] border transition-all duration-500 hover:shadow-lg ${
+      className={`group bg-card rounded-2xl border transition-all duration-500 hover:shadow-lg ${
         isSelected
           ? "border-primary/50 ring-4 ring-primary/5 shadow-primary/5 bg-primary/[0.02]"
           : isOpen
@@ -26,7 +26,7 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
       {/* Header */}
       <div
         onClick={onToggle}
-        className={`cursor-pointer p-4 md:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-colors`}
+        className={`cursor-pointer p-4 md:p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-colors`}
       >
         <div className="flex gap-3 md:gap-8 items-center">
           <div
@@ -84,7 +84,7 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
                 Selected
               </span>
             ) : (
-              "Select Course"
+              "Select"
             )}
           </button>
 
