@@ -35,7 +35,7 @@ export default function CourseSelection({
             className="w-full bg-background border border-border rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all pr-10"
           />
           <svg
-            className="w-4 h-4 text-foreground/30 absolute right-3 top-1/2 -translate-y-1/2"
+            className="w-4 h-4 text-primary/40 absolute right-3 top-1/2 -translate-y-1/2"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -51,11 +51,11 @@ export default function CourseSelection({
 
           <button
             onClick={onClearSelection}
-            className="p-1 rounded-xl text-accent hover:bg-accent/10 transition-colors group"
+            className="p-1 rounded-xl text-primary/60 hover:text-primary hover:bg-primary/10 transition-colors group"
             title="Clear all"
           >
             <svg
-              className="w-5 h-5 group-hover:rotate-90 transition-transform"
+              className="w-5 h-5 group-hover:rotate-180 transition-transform"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

@@ -39,11 +39,11 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
             {course.courseCode}
           </div>
           <div>
-            <h2 className={`text-base md:text-lg font-bold mb-0.5 transition-colors ${isSelected ? 'text-primary' : 'text-foreground group-hover:text-primary'}`}>
+            <h2 className={`text-base md:text-lg font-bold mb-0.5 transition-colors ${isSelected ? 'text-primary' : 'text-zinc-100 dark:text-zinc-100 group-hover:text-primary'}`}>
               {course.courseName}
             </h2>
-            <div className="flex items-center gap-2 md:gap-3 text-[9px] font-bold text-foreground/40 uppercase tracking-widest">
-              <span className="px-1.5 py-0.5 rounded-md bg-foreground/5 border border-border/50 text-foreground/60">
+            <div className="flex items-center gap-2 md:gap-3 text-[9px] font-bold text-primary/40 uppercase tracking-widest">
+              <span className="px-1.5 py-0.5 rounded-md bg-primary/5 border border-primary/10 text-primary/60">
                 {course.courseCode}
               </span>
               <span>•</span>
@@ -149,8 +149,8 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
           {/* Sections */}
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <div className="w-1 h-1 rounded-full bg-secondary" />
-              <h3 className="text-[9px] font-black uppercase tracking-[0.15em] text-foreground/30">
+              <div className="w-1 h-1 rounded-full bg-primary" />
+              <h3 className="text-[9px] font-black uppercase tracking-[0.15em] text-primary/30">
                 Sections
               </h3>
             </div>
@@ -162,10 +162,10 @@ export default function CourseAccordionItem({ course: propCourse, isOpen, onTogg
                   className="p-3 rounded-xl bg-foreground/[0.01] border border-border/60 hover:border-primary/30 transition-all bg-card"
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <p className="font-black text-[9px] text-foreground uppercase tracking-wider">
+                    <p className="font-black text-[9px] text-primary/80 uppercase tracking-wider">
                       Sec {section.sectionId}
                     </p>
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                   </div>
 
                   <div className="flex flex-wrap gap-x-4 gap-y-1">
