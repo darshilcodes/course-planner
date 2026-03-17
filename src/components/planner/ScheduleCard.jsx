@@ -1,7 +1,7 @@
 import React from "react";
 
-const daysHeader = ["Mon", "Tue", "Wed", "Thu", "Fri" ];
-const daysFull = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY" ];
+const daysHeader = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ];
+const daysFull = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY" ];
 
 const ScheduleCard = React.forwardRef(({ schedule, index, onExport }, ref) => {
   // 1. Flatten all slots across the schedule
@@ -77,7 +77,7 @@ return (
         <div className="min-w-[900px]">
 
           {/* Days Header */}
-          <div className="grid grid-cols-[100px_repeat(5,1fr)] mb-1">
+          <div className="grid grid-cols-[100px_repeat(6,1fr)] mb-1">
             <div></div>
             {daysHeader.map((day) => (
               <div
@@ -96,7 +96,7 @@ return (
               {timeBlocks.map((block) => (
                 <div
                   key={block.start}
-                  className="grid grid-cols-[100px_repeat(5,1fr)] border-t border-border"
+                  className="grid grid-cols-[100px_repeat(6,1fr)] border-t border-border"
                 >
                   {/* Time Column */}
                   <div className="py-2 px-1  text-right">
